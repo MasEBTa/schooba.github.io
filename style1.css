@@ -1,0 +1,309 @@
+			
+/*__________________________________________________________
+					mengatur ukuran utama
+____________________________________________________________*/
+html , body{
+	height: 100%;
+}
+	/*tinggi untuk header*/
+	#header {
+		height: 80px;
+	}
+	/*tinggi untuk menu utama*/
+	#main {
+		height: 74%;
+		margin-top: 0.3rem;
+		margin-bottom: 0.5rem;
+		border: none;
+	}
+	/*tinggi untuk footer*/
+	#footer {
+	height: 13%;
+	}
+	#judul2 {
+		display: none;
+	}
+/*akhir aturan ukuran utama
+___________________________________________________________*/
+
+						
+			/*__________________________________________________________
+						mengatur ukuran utama tiap mapel
+			____________________________________________________________*/
+				/*tinggi untuk menu utama*/
+				#mainblog {
+					height: 100%;
+					border: none;
+				}
+				#mainblog {
+					width: 98%;
+					margin-left: 1%;
+					margin-right: 1%;
+				}
+			/*akhir aturan ukuran utama
+			___________________________________________________________*/
+
+/*_________________________________________________________
+style umum untuk header footer main dan body
+___________________________________________________________*/
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  overflow-y: hidden;
+}
+#header {
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+#main {
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+#footer {
+	text-align: center;
+	color: white;
+}
+	#footer main {
+		padding-top: 1%;
+	}
+
+@media screen and (max-width: 1025px){
+	#footer {
+		display: none;
+	}
+	#main {
+		margin: 0 0 0 0;
+		width: 100%;
+		height: 90%;
+		/*border: solid 0.2rem;
+		border-color: rgb(204, 204, 204);*/
+		overflow-y: scroll;
+	}
+	#mainblog {
+		margin: 0 0 0 0;
+		width: 100%;
+		height: 100%;
+		/*border: solid 0.2rem;
+		border-color: rgb(204, 204, 204);*/
+		overflow-y: scroll;
+	}
+}
+@media screen and (max-width: 300px){
+	#judul1 {
+		display: none;
+	}
+	#judul2 {
+		display: block;
+	}
+}
+@media screen and (max-width: 279px){
+	#judul1 {
+		display: none;
+	}
+	#judul2 {
+		display: block;
+		font-size: 0.8rem;
+	}
+}
+@media screen and (max-width: 226px){
+	#judul1 {
+		display: none;
+	}
+	#judul2 {
+		display: block;
+		font-size: 0.5rem;
+	}
+}
+		
+/*_________________________________________________________*/
+
+
+/*_________________________________________________________
+# Back to top buttons
+_________________________________________________________*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  /*background: #5846f9;*/
+  background: #ff9900; 
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #7b27d8;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+/*_________________________________________________________*/
+
+
+/*_________________________________________________________
+style untuk bagian kanan dan kiri tiap mapel
+___________________________________________________________*/
+.bagiankiri {
+	border: solid 0.2rem;
+	border-color: rgb(204, 204, 204);
+	border-radius: 10% 0 0 10%;
+	padding-bottom: 1.5rem;
+	height: 100%;
+	width: 15%;
+	display: inline-block;
+	overflow-y: scroll;
+	white-space: wrap;
+}
+.bagiankanan {
+	border: solid 0.2rem;
+	border-color: rgb(204, 204, 204);
+	border-radius: 0 5% 5% 0;
+	height: 100%;
+	margin-left: 1%;
+	width: 84%;
+	display: inline-block;
+	overflow-y: scroll;
+	white-space: wrap;
+}
+
+@media screen and (max-width: 1025px){
+	.bagiankiri {
+		border: none;
+		border-radius: 0 0 0 0;
+		height: 11rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 3%;
+		padding-right: 3%;
+		width: 100%;
+		display: block;
+		overflow-x: scroll;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	.bagiankanan {
+		border: solid 0.2rem;
+		border-color: rgb(204, 204, 204);
+		border-radius: 5% 5% 5% 5%;
+		margin-left: 1%;
+		width: 99%;
+		display: block;
+		overflow: auto;
+	}
+}
+/*________________________________________________________*/
+
+
+
+/*________________________________________________________
+			Scroller 
+__________________________________________________________*/
+::-webkit-scrollbar {
+      width: 0.6rem;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+      background-color: #e6e6e6;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(115, 115, 115, 0.2); 
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #fff;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+
+	@media screen and (max-width: 991px){
+		::-webkit-scrollbar {
+		    display: none;
+		}
+	}
+/*_______________________________________________________*/
+
+
+
+/*________________________________________________________
+	Flashcard untuk judul bab
+__________________________________________________________*/
+.kartu-blog {
+			width: 98%;
+			max-width: 20rem;
+			height: 8rem;
+			text-align: center;
+			display: block;
+			border-radius: 8%;
+			margin-top: 10%;
+			white-space: nowrap;
+			box-shadow: 0 0 0.1px 0.1px grey, 0 0 2px 2px grey;
+			align-content: center;
+			margin-right: 1%;
+			margin-left: 1%;
+			text-decoration: none;
+			color: black;
+		}
+		@media screen and (max-width: 1025px){
+			.kartu-blog {
+				width: 8rem;
+				min-width: 150px;
+				height: 8rem;
+				text-align: center;
+				display: inline-block;
+				border-radius: 8%;
+				margin: 0.5rem;
+				margin-bottom: 0.5rem;
+				white-space: nowrap;
+				box-shadow: 0 0 0.1px 0.1px grey, 0 0 2px 2px grey;
+				align-content: center;
+				margin-right: 1%;
+				margin-left: 1%;
+				text-decoration: none;
+				color: black;
+			}
+			.hp {
+				/*min-width: 200px;*/
+			}
+		}
+.gb-bab {
+	background-size: cover;
+}
+.kartu-judul {
+	width: 100%;
+	height: 20%;
+	color: #fff;
+	margin: auto;
+	background-color: rgba(100, 100, 100, 60%);
+	font-weight: bold;
+}
+.kartu-tengah {
+	width: 100%;
+	height: 47%;
+}
+.kartu-text {
+	width: 100%;
+	height: 33%;
+	color: #fff;
+	margin: auto;
+	background-color: rgba(100, 100, 100, 60%);
+	font-weight: lighter;
+	text-align: center;
+}
+/*_______________________________________________________*/
